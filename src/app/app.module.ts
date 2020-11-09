@@ -24,9 +24,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatTabsModule } from '@angular/material/tabs';
+import { AnimationSwipeComponent } from './demo/animation-swipe/animation-swipe.component';
+import { HammerModule} from '@angular/platform-browser';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent],
+  declarations: [AppComponent, HomeComponent, AnimationSwipeComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -51,6 +53,7 @@ import { MatTabsModule } from '@angular/material/tabs';
     MatTooltipModule,
     MatProgressSpinnerModule,
     MatTabsModule,
+    HammerModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
