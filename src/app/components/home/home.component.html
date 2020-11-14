@@ -1,46 +1,6 @@
-<nav mat-tab-nav-bar [backgroundColor]="">
-  <div><a mat-tab-link>Logo 1</a></div>
-  <div class="display-flex space-between">
-    <!-- <div><a mat-tab-link>Logo 1</a>
-    </div> -->
-    <div>
-      <a mat-tab-link>Button 1</a>
-      <a mat-tab-link>Button 2</a>
-    </div>
-    <!-- <a mat-tab-link>Button 1</a>
-      <a mat-tab-link>Button 2</a> -->
-  </div>
-</nav>
-
-<mat-tab-group mat-align-tabs="end">
-  <mat-tab>
-    <ng-template mat-tab-label>
-      <mat-icon class="example-tab-icon">thumb_up</mat-icon>
-    </ng-template>
-    Content 1
-  </mat-tab>
-
-  <mat-tab>
-    <ng-template mat-tab-label>
-      <mat-icon class="example-tab-icon">thumb_up</mat-icon>
-    </ng-template>
-    Content 2
-  </mat-tab>
-
-  <mat-tab>
-    <ng-template mat-tab-label>
-      <mat-icon class="example-tab-icon">thumb_up</mat-icon>
-    </ng-template>
-
-    Content 3
-  </mat-tab>
-
-  <mat-tab>
-    <ng-template mat-tab-label>
-      <mat-icon class="example-tab-icon">menu</mat-icon>
-    </ng-template>
-
-    Content 3
-  </mat-tab>
-</mat-tab-group>
-<app-animation-swipe></app-animation-swipe>
+<div (swipeleft)="handleSwipeLeft()" (swiperight)="handleSwipeRight()">
+  swipe me, either left or right
+  <br>
+  <br>
+  What is Lorem Ipsum Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum has been the industry's standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book it has?
+</div>
