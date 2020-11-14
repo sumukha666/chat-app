@@ -1,0 +1,5 @@
+<app-home [index]="dynamicIndex" (getIndex)="getIndex($event)"></app-home>
+<p [@cardAnimator]="animationState"
+(@cardAnimator.done)="resetAnimationState()"
+(swipeleft)="swipeLeft('slideOutLeft',$event)"
+(swiperight)="swipeRight('slideOutRight',$event)">about-page-component works!</p>

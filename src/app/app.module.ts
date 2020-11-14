@@ -26,9 +26,13 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatTabsModule } from '@angular/material/tabs';
 import { AnimationSwipeComponent } from './demo/animation-swipe/animation-swipe.component';
 import { HammerModule} from '@angular/platform-browser';
+import { LeftComponentComponent } from './demo/swipePages/left-component/left-component.component';
+import { RightComponentComponent } from './demo/swipePages/right-component/right-component.component';
+import { AboutPageComponentComponent } from './demo/swipePages/about-page-component/about-page-component.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, AnimationSwipeComponent],
+  declarations: [AppComponent, HomeComponent, AnimationSwipeComponent,
+    LeftComponentComponent, RightComponentComponent, AboutPageComponentComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

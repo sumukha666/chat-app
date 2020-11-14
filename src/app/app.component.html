@@ -1,1 +1,5 @@
-<app-home></app-home>
+<!-- <app-home></app-home> -->
+<main [@routeAnimations] = "prepareRoute(outlet)" class="content"
+>
+    <router-outlet #outlet="outlet"></router-outlet>
+</main>

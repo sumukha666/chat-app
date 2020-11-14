@@ -4,43 +4,46 @@
     <!-- <div><a mat-tab-link>Logo 1</a>
     </div> -->
     <div>
-      <a mat-tab-link>Button 1</a>
-      <a mat-tab-link>Button 2</a>
+      <a mat-tab-link (click)="clickBtn1($event)">Button 1</a>
+      <a mat-tab-link (click)="clickBtn2($event)">Button 2</a>
     </div>
     <!-- <a mat-tab-link>Button 1</a>
       <a mat-tab-link>Button 2</a> -->
   </div>
 </nav>
 
-<mat-tab-group mat-align-tabs="end">
+<mat-tab-group mat-align-tabs="end" [selectedIndex]="index" >
   <mat-tab>
-    <ng-template mat-tab-label>
-      <mat-icon class="example-tab-icon">thumb_up</mat-icon>
+    <ng-template mat-tab-label #id1 >
+      <mat-icon class="example-tab-icon" >thumb_up</mat-icon>
     </ng-template>
-    Content 1
+    <div  #idOne
+    >
+    </div>
   </mat-tab>
 
   <mat-tab>
-    <ng-template mat-tab-label>
+    <ng-template mat-tab-label #id2>
       <mat-icon class="example-tab-icon">thumb_up</mat-icon>
     </ng-template>
     Content 2
   </mat-tab>
-
-  <mat-tab>
-    <ng-template mat-tab-label>
+<!-- 
+  <mat-tab >
+    
+    <ng-template mat-tab-label #id3>
       <mat-icon class="example-tab-icon">thumb_up</mat-icon>
+      
     </ng-template>
 
     Content 3
-  </mat-tab>
+  </mat-tab> -->
 
   <mat-tab>
-    <ng-template mat-tab-label>
+    <ng-template mat-tab-label #id4>
       <mat-icon class="example-tab-icon">menu</mat-icon>
     </ng-template>
 
     Content 3
   </mat-tab>
 </mat-tab-group>
-<app-animation-swipe></app-animation-swipe>
