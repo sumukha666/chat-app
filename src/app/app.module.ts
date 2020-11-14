@@ -25,10 +25,20 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatTabsModule } from '@angular/material/tabs';
 import { AnimationSwipeComponent } from './demo/animation-swipe/animation-swipe.component';
-import { HammerModule} from '@angular/platform-browser';
+import { HammerModule } from '@angular/platform-browser';
+import { NavBarComponent } from './components/nav-bar/nav-bar.component';
+import { ActivityComponent } from './components/activity/activity.component';
+import { MenuComponent } from './components/menu/menu.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, AnimationSwipeComponent],
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    AnimationSwipeComponent,
+    NavBarComponent,
+    ActivityComponent,
+    MenuComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,

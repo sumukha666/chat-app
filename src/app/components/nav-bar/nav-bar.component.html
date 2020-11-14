@@ -1,0 +1,32 @@
+<nav mat-tab-nav-bar [backgroundColor]="">
+  <div><a mat-tab-link>Logo 1</a></div>
+  <div class="display-flex space-between">
+    <div>
+      <a mat-tab-link>Button 1</a>
+      <a mat-tab-link>Button 2</a>
+    </div>
+  </div>
+</nav>
+
+<mat-tab-group mat-align-tabs="center" [selectedIndex]="currentIndex">
+  <mat-tab>
+    <ng-template mat-tab-label>
+      <mat-icon class="example-tab-icon">home</mat-icon>
+    </ng-template>
+    <app-home (sendIndex)="getIndex($event)"></app-home>
+  </mat-tab>
+
+  <mat-tab>
+    <ng-template mat-tab-label>
+      <mat-icon class="example-tab-icon">games</mat-icon>
+    </ng-template>
+    <app-activity (sendIndex)="getIndex($event)"></app-activity>
+  </mat-tab>
+
+  <mat-tab>
+    <ng-template mat-tab-label>
+      <mat-icon class="example-tab-icon">menu</mat-icon>
+    </ng-template>
+    <app-menu (sendIndex)="getIndex($event)"></app-menu>
+  </mat-tab>
+</mat-tab-group>
