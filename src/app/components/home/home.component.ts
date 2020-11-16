@@ -1,12 +1,20 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from "@angular/core";
+import { trigger, keyframes, animate, transition } from "@angular/animations";
+import * as kf from "../../keyFrames";
+
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss'],
+  selector: "app-home",
+  templateUrl: "./home.component.html",
+  styleUrls: ["./home.component.scss"],
+  animations: [
+    trigger("swipeEndAnimation", [
+      transition("* => headShake", animate(1500, keyframes(kf.headShake))),
+    ]),
+  ],
 })
 export class HomeComponent implements OnInit {
   @Output() sendIndex: EventEmitter<any> = new EventEmitter<any>();
-
+  animationState: string;
   constructor() {}
 
   ngOnInit(): void {}
@@ -15,7 +23,15 @@ export class HomeComponent implements OnInit {
     this.sendIndex.emit(1);
   }
 
-  handleSwipeRight(): any {
-    this.sendIndex.emit(2);
+  startAnimation(state): any {
+    console.log(state);
+    if (this.animationState !== state) {
+      this.animationState = state;
+    }
+  }
+
+  resetAnimationState(): any {
+    console.log("animation Ended");
+    this.animationState = "";
   }
 }

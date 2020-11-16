@@ -1,22 +1,39 @@
-import { EventEmitter } from '@angular/core';
-import { Output } from '@angular/core';
-import { Component, OnInit } from '@angular/core';
+import { EventEmitter } from "@angular/core";
+import { Output } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
+import { trigger, keyframes, animate, transition } from "@angular/animations";
+import * as kf from "../../keyFrames";
 
 @Component({
-  selector: 'app-menu',
-  templateUrl: './menu.component.html',
-  styleUrls: ['./menu.component.scss'],
+  selector: "app-menu",
+  templateUrl: "./menu.component.html",
+  styleUrls: ["./menu.component.scss"],
+  animations: [
+    trigger("swipeEndAnimation", [
+      transition("* => headShake", animate(1000, keyframes(kf.headShake))),
+    ]),
+  ],
 })
 export class MenuComponent implements OnInit {
   @Output() sendIndex: EventEmitter<any> = new EventEmitter<any>();
+  animationState: string;
   constructor() {}
 
   ngOnInit(): void {}
-  handleSwipeLeft(): any {
-    this.sendIndex.emit(0);
-  }
 
   handleSwipeRight(): any {
     this.sendIndex.emit(1);
+  }
+
+  startAnimation(state): any {
+    console.log(state);
+    if (this.animationState !== state) {
+      this.animationState = state;
+    }
+  }
+
+  resetAnimationState(): any {
+    console.log("animation Ended");
+    this.animationState = "";
   }
 }
