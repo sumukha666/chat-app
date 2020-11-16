@@ -1,4 +1,4 @@
-import { EventEmitter } from "@angular/core";
+import { EventEmitter, HostListener } from "@angular/core";
 import { Output } from "@angular/core";
 import { Component, OnInit } from "@angular/core";
 import { trigger, keyframes, animate, transition } from "@angular/animations";
@@ -33,7 +33,10 @@ export class MenuComponent implements OnInit {
   }
 
   resetAnimationState(): any {
-    console.log("animation Ended");
     this.animationState = "";
+  }
+  @HostListener("window:focus", ["$event"])
+  onFocus(event: any): void {
+    this.resetAnimationState();
   }
 }

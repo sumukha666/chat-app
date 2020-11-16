@@ -1,4 +1,10 @@
-import { Component, OnInit, Output, EventEmitter } from "@angular/core";
+import {
+  Component,
+  OnInit,
+  Output,
+  EventEmitter,
+  HostListener,
+} from "@angular/core";
 import { trigger, keyframes, animate, transition } from "@angular/animations";
 import * as kf from "../../keyFrames";
 
@@ -33,5 +39,10 @@ export class HomeComponent implements OnInit {
   resetAnimationState(): any {
     console.log("animation Ended");
     this.animationState = "";
+  }
+
+  @HostListener("window:focus", ["$event"])
+  onFocus(event: any): void {
+    this.resetAnimationState();
   }
 }
