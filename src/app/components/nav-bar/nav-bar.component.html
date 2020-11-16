@@ -11,21 +11,27 @@
 <mat-tab-group mat-align-tabs="center" [selectedIndex]="currentIndex">
   <mat-tab>
     <ng-template mat-tab-label>
-      <mat-icon class="example-tab-icon">home</mat-icon>
+      <div #home>
+        <mat-icon class="example-tab-icon">home</mat-icon>
+      </div>
     </ng-template>
     <app-home (sendIndex)="getIndex($event)"></app-home>
   </mat-tab>
 
   <mat-tab>
     <ng-template mat-tab-label>
-      <mat-icon class="example-tab-icon">games</mat-icon>
+      <div #activity>
+        <mat-icon class="example-tab-icon">games</mat-icon>
+      </div>
     </ng-template>
     <app-activity (sendIndex)="getIndex($event)"></app-activity>
   </mat-tab>
 
   <mat-tab>
     <ng-template mat-tab-label>
-      <mat-icon class="example-tab-icon">menu</mat-icon>
+      <div #menu>
+        <mat-icon class="example-tab-icon">menu</mat-icon>
+      </div>
     </ng-template>
     <app-menu (sendIndex)="getIndex($event)"></app-menu>
   </mat-tab>
