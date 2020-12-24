@@ -1,9 +1,4 @@
-<div
-  [@swipeEndAnimation]="animationState"
-  (@swipeEndAnimation.done)="resetAnimationState()"
-  (swipeleft)="handleSwipeLeft()"
-  (swiperight)="startAnimation('headShake')"
->
+<div (swipeleft)="handleSwipeLeft()">
   swipe me, either left or right
   <br />
   <br />
@@ -12,3 +7,10 @@
   ever since the 1500s when an unknown printer took a galley of type and
   scrambled it to make a type specimen book it has?
 </div>
+<!-- (@swipeEndAnimation.start)="onAnimationEvent($event)" -->
+<!-- (@swipeEndAnimation.done)="resetAnimationState()" -->
+
+<!-- (@swipeEndAnimation.start)="onStartAnimation()"
+(@swipeEndAnimation.done)="resetAnimationState()"
+(swipeleft)="handleSwipeLeft()"
+(swiperight)="startAnimation('headShake')" -->

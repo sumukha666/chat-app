@@ -1,9 +1,4 @@
-<div
-  [@swipeEndAnimation]="animationState"
-  (@swipeEndAnimation.done)="resetAnimationState()"
-  (swipeleft)="startAnimation('headShake')"
-  (swiperight)="handleSwipeRight()"
->
+<div class="divPage" (swiperight)="handleSwipeRight()">
   swipe me, either left or right
   <br />
   <br />
