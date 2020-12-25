@@ -1,11 +1,21 @@
 <div (swipeleft)="handleSwipeLeft()">
-  swipe me, either left or right
-  <br />
-  <br />
-  What is Lorem Ipsum Lorem Ipsum is simply dummy text of the printing and
-  typesetting industry Lorem Ipsum has been the industry's standard dummy text
-  ever since the 1500s when an unknown printer took a galley of type and
-  scrambled it to make a type specimen book it has?
+  <div
+    class="content"
+    fxLayout="row wrap"
+  >
+    <div fxFlex="20%" fxFlex.xs="100%" fxFlex.sm="100%">Under dev</div>
+    <div fxFlex="60%" fxFlex.xs="100%" fxFlex.sm="100%">
+      <app-card
+        *ngFor="let obj of userObj"
+        [iconUrl]="obj['iconUrl']"
+        [userName]="obj['name']"
+        [userProf]="obj['prof']"
+        [postUrl]="obj['postUrl']"
+        [cardText]="obj['cardText']"
+      ></app-card>
+    </div>
+    <div fxFlex="20%" fxFlex.xs="100%" fxFlex.sm="100%">Under dev</div>
+  </div>
 </div>
 <!-- (@swipeEndAnimation.start)="onAnimationEvent($event)" -->
 <!-- (@swipeEndAnimation.done)="resetAnimationState()" -->

@@ -28,6 +28,7 @@ import { HammerModule } from "@angular/platform-browser";
 import { NavBarComponent } from "./components/nav-bar/nav-bar.component";
 import { ActivityComponent } from "./components/activity/activity.component";
 import { MenuComponent } from "./components/menu/menu.component";
+import { CardComponent } from "./components/card/card.component";
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { MenuComponent } from "./components/menu/menu.component";
     NavBarComponent,
     ActivityComponent,
     MenuComponent,
+    CardComponent,
   ],
   imports: [
     BrowserModule,
