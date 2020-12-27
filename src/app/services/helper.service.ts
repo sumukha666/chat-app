@@ -63,12 +63,12 @@ export class HelperService {
     const userId = Math.round(Math.random() * 10) % 7;
     const returnObj = this.userObj[userId];
     // tslint:disable-next-line: no-string-literal
-    returnObj["postUrl"] = "/assets/posts/" + postId + ".jpg";
+    returnObj["postUrl"] = "assets/posts/" + postId + ".jpg";
     // tslint:disable-next-line: no-string-literal
     returnObj["cardText"] = this.quotes[quotesId];
     // tslint:disable-next-line: no-string-literal
     returnObj["iconUrl"] =
-      "background-image: url(/assets/icons/" + returnObj.id + ".jpg);";
+      "background-image: url(assets/icons/" + returnObj.id + ".jpg);";
     return returnObj;
   }
 }
