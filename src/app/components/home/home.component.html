@@ -1,10 +1,58 @@
 <div (swipeleft)="handleSwipeLeft()">
-  <div
-    class="content"
-    fxLayout="row wrap"
-  >
-    <div fxFlex="20%" fxFlex.xs="100%" fxFlex.sm="100%">Under dev</div>
-    <div fxFlex="60%" fxFlex.xs="100%" fxFlex.sm="100%">
+  <div class="content" fxLayout="row wrap">
+    <div fxFlex="20%" fxFlex.xs="100%" fxFlex.sm="100%" class="leftDiv">
+      <mat-card class="example-card">
+        <mat-card-header>
+          <mat-card-title>Menu</mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="contents">
+          <!-- <mat-selection-list #shoes [multiple]="false">
+            <mat-list-option [value]="'opt1'"> option1 </mat-list-option>
+            <mat-list-option [value]="'opt2'"> option2 </mat-list-option>
+            <mat-list-option [value]="'opt3'"> option3 </mat-list-option>
+          </mat-selection-list> -->
+          <mat-accordion>
+            <mat-expansion-panel hideToggle class="extension">
+              <mat-expansion-panel-header>
+                <mat-panel-title> Menu-1 </mat-panel-title>
+                <!-- <mat-panel-description>
+                  This is a summary of the content
+                </mat-panel-description> -->
+              </mat-expansion-panel-header>
+              <mat-selection-list #shoes [multiple]="false">
+                <mat-list-option [value]="'opt1'"> option1 </mat-list-option>
+                <mat-list-option [value]="'opt2'"> option2 </mat-list-option>
+                <mat-list-option [value]="'opt3'"> option3 </mat-list-option>
+              </mat-selection-list>
+            </mat-expansion-panel>
+
+            <mat-expansion-panel hideToggle class="extension">
+              <mat-expansion-panel-header>
+                <mat-panel-title> Menu-2 </mat-panel-title>
+              </mat-expansion-panel-header>
+              <mat-selection-list #shoes [multiple]="false">
+                <mat-list-option [value]="'opt1'"> option1 </mat-list-option>
+                <mat-list-option [value]="'opt2'"> option2 </mat-list-option>
+                <mat-list-option [value]="'opt3'"> option3 </mat-list-option>
+              </mat-selection-list>
+            </mat-expansion-panel>
+
+            <mat-expansion-panel hideToggle class="extension">
+              <mat-expansion-panel-header>
+                <mat-panel-title> Menu-3 </mat-panel-title>
+              </mat-expansion-panel-header>
+              <mat-selection-list #shoes [multiple]="false">
+                <mat-list-option [value]="'opt1'"> option1 </mat-list-option>
+                <mat-list-option [value]="'opt2'"> option2 </mat-list-option>
+                <mat-list-option [value]="'opt3'"> option3 </mat-list-option>
+              </mat-selection-list>
+            </mat-expansion-panel>
+          </mat-accordion>
+        </mat-card-content>
+      </mat-card>
+    </div>
+
+    <div fxFlex="60%" fxFlex.xs="100%" fxFlex.sm="100%" class="exp">
       <app-card
         *ngFor="let obj of userObj"
         [iconUrl]="obj['iconUrl']"
@@ -14,7 +62,11 @@
         [cardText]="obj['cardText']"
       ></app-card>
     </div>
+
     <div fxFlex="20%" fxFlex.xs="100%" fxFlex.sm="100%">Under dev</div>
+  </div>
+  <div class="adv">
+    <p>adv will be displayed</p>
   </div>
 </div>
 <!-- (@swipeEndAnimation.start)="onAnimationEvent($event)" -->

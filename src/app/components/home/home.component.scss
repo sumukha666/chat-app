@@ -8,3 +8,48 @@
   padding: 1rem;
   overflow: hidden;
 }
+
+.leftDiv {
+  position: fixed;
+  float: left;
+}
+
+.adv {
+  float: inline-end;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.example-card {
+  min-width: 19%;
+}
+
+.exp {
+  margin-left: 20%;
+}
+
+.contents {
+  min-width: 19vw;
+  background-color: r;
+}
+
+.extension {
+  margin-right: 1vw;
+}
+
+@media only screen and (max-width: 600px) {
+  .leftDiv {
+    display: none;
+  }
+  .exp {
+    margin-left: 0;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+  .extension {
+    margin-right: 0.5vw;
+  }
+}

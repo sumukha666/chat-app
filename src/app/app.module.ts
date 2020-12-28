@@ -33,7 +33,7 @@ import {
   HAMMER_GESTURE_CONFIG,
   HammerGestureConfig,
 } from "@angular/platform-browser";
-
+import { MatExpansionModule } from "@angular/material/expansion";
 export class MyHammerConfig extends HammerGestureConfig {
   overrides = {
     pinch: { enable: false },
@@ -75,6 +75,7 @@ export class MyHammerConfig extends HammerGestureConfig {
     MatProgressSpinnerModule,
     MatTabsModule,
     HammerModule,
+    MatExpansionModule,
   ],
   providers: [
     {
