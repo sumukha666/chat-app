@@ -36,20 +36,26 @@
 }
 
 .extension {
-  margin-right: 1vw;
+  max-width: 18vw;
 }
 
 @media only screen and (max-width: 600px) {
   .leftDiv {
-    display: none;
+    padding-bottom: 1rem;
+    position: relative;
+    float: inline-start;
   }
   .exp {
     margin-left: 0;
+  }
+
+  .extension {
+    max-width: 90vw;
   }
 }
 
 @media only screen and (min-width: 600px) and (max-width: 768px) {
   .extension {
-    margin-right: 0.5vw;
+    max-width: 19vw;
   }
 }

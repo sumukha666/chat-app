@@ -6,18 +6,10 @@
           <mat-card-title>Menu</mat-card-title>
         </mat-card-header>
         <mat-card-content class="contents">
-          <!-- <mat-selection-list #shoes [multiple]="false">
-            <mat-list-option [value]="'opt1'"> option1 </mat-list-option>
-            <mat-list-option [value]="'opt2'"> option2 </mat-list-option>
-            <mat-list-option [value]="'opt3'"> option3 </mat-list-option>
-          </mat-selection-list> -->
           <mat-accordion>
             <mat-expansion-panel hideToggle class="extension">
               <mat-expansion-panel-header>
                 <mat-panel-title> Menu-1 </mat-panel-title>
-                <!-- <mat-panel-description>
-                  This is a summary of the content
-                </mat-panel-description> -->
               </mat-expansion-panel-header>
               <mat-selection-list #shoes [multiple]="false">
                 <mat-list-option [value]="'opt1'"> option1 </mat-list-option>
@@ -69,10 +61,3 @@
     <p>adv will be displayed</p>
   </div>
 </div>
-<!-- (@swipeEndAnimation.start)="onAnimationEvent($event)" -->
-<!-- (@swipeEndAnimation.done)="resetAnimationState()" -->
-
-<!-- (@swipeEndAnimation.start)="onStartAnimation()"
-(@swipeEndAnimation.done)="resetAnimationState()"
-(swipeleft)="handleSwipeLeft()"
-(swiperight)="startAnimation('headShake')" -->
