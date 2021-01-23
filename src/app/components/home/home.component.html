@@ -1,16 +1,63 @@
 <div (swipeleft)="handleSwipeLeft()">
-  swipe me, either left or right
-  <br />
-  <br />
-  What is Lorem Ipsum Lorem Ipsum is simply dummy text of the printing and
-  typesetting industry Lorem Ipsum has been the industry's standard dummy text
-  ever since the 1500s when an unknown printer took a galley of type and
-  scrambled it to make a type specimen book it has?
-</div>
-<!-- (@swipeEndAnimation.start)="onAnimationEvent($event)" -->
-<!-- (@swipeEndAnimation.done)="resetAnimationState()" -->
+  <div class="content" fxLayout="row wrap">
+    <div fxFlex="20%" fxFlex.xs="100%" fxFlex.sm="100%" class="leftDiv">
+      <mat-card class="example-card">
+        <mat-card-header>
+          <mat-card-title>Menu</mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="contents">
+          <mat-accordion>
+            <mat-expansion-panel hideToggle class="extension">
+              <mat-expansion-panel-header>
+                <mat-panel-title> Menu-1 </mat-panel-title>
+              </mat-expansion-panel-header>
+              <mat-selection-list #shoes [multiple]="false">
+                <mat-list-option [value]="'opt1'"> option1 </mat-list-option>
+                <mat-list-option [value]="'opt2'"> option2 </mat-list-option>
+                <mat-list-option [value]="'opt3'"> option3 </mat-list-option>
+              </mat-selection-list>
+            </mat-expansion-panel>
 
-<!-- (@swipeEndAnimation.start)="onStartAnimation()"
-(@swipeEndAnimation.done)="resetAnimationState()"
-(swipeleft)="handleSwipeLeft()"
-(swiperight)="startAnimation('headShake')" -->
+            <mat-expansion-panel hideToggle class="extension">
+              <mat-expansion-panel-header>
+                <mat-panel-title> Menu-2 </mat-panel-title>
+              </mat-expansion-panel-header>
+              <mat-selection-list #shoes [multiple]="false">
+                <mat-list-option [value]="'opt1'"> option1 </mat-list-option>
+                <mat-list-option [value]="'opt2'"> option2 </mat-list-option>
+                <mat-list-option [value]="'opt3'"> option3 </mat-list-option>
+              </mat-selection-list>
+            </mat-expansion-panel>
+
+            <mat-expansion-panel hideToggle class="extension">
+              <mat-expansion-panel-header>
+                <mat-panel-title> Menu-3 </mat-panel-title>
+              </mat-expansion-panel-header>
+              <mat-selection-list #shoes [multiple]="false">
+                <mat-list-option [value]="'opt1'"> option1 </mat-list-option>
+                <mat-list-option [value]="'opt2'"> option2 </mat-list-option>
+                <mat-list-option [value]="'opt3'"> option3 </mat-list-option>
+              </mat-selection-list>
+            </mat-expansion-panel>
+          </mat-accordion>
+        </mat-card-content>
+      </mat-card>
+    </div>
+
+    <div fxFlex="60%" fxFlex.xs="100%" fxFlex.sm="100%" class="exp">
+      <app-card
+        *ngFor="let obj of userObj"
+        [iconUrl]="obj['iconUrl']"
+        [userName]="obj['name']"
+        [userProf]="obj['prof']"
+        [postUrl]="obj['postUrl']"
+        [cardText]="obj['cardText']"
+      ></app-card>
+    </div>
+
+    <div fxFlex="20%" fxFlex.xs="100%" fxFlex.sm="100%">Under dev</div>
+  </div>
+  <div class="adv">
+    <p>adv will be displayed</p>
+  </div>
+</div>

@@ -1,0 +1,37 @@
+
+.example-card {
+  margin: 3rem;
+}
+
+.example-header-image {
+  //   background-image: url("https://material.angular.io/assets/img/examples/shiba1.jpg");
+  background-size: cover;
+}
+
+.card-image {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  padding: 1rem;
+}
+
+// .card-text{
+//   //font-family: 'Bangers', cursive;
+//   font-family: 'Dancing Script', cursive;
+// }
+
+@media only screen and (max-width: 480px) {
+  /* For mobile phones: */
+
+  .example-card {
+    margin: 1rem;
+  }
+
+  .card-image {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    padding: 1rem;
+  }
+}
+

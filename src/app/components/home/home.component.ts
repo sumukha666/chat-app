@@ -1,9 +1,5 @@
-import {
-  Component,
-  OnInit,
-  Output,
-  EventEmitter,
-} from "@angular/core";
+import { HelperService } from "./../../services/helper.service";
+import { Component, OnInit, Output, EventEmitter } from "@angular/core";
 
 @Component({
   selector: "app-home",
@@ -11,12 +7,24 @@ import {
   styleUrls: ["./home.component.scss"],
 })
 export class HomeComponent implements OnInit {
-  @Output() sendIndex: EventEmitter<any> = new EventEmitter<any>();
-  constructor() {}
+  userObj = [];
 
-  ngOnInit(): void {}
+  @Output() sendIndex: EventEmitter<any> = new EventEmitter<any>();
+  constructor(private helperFun: HelperService) {}
+
+  ngOnInit(): void {
+    this.getFivePosts();
+  }
 
   handleSwipeLeft(): any {
     this.sendIndex.emit(1);
+  }
+
+  getFivePosts(): void {
+    for (let i = 0; i < 5; i++) {
+      console.log(i);
+      this.userObj.push(this.helperFun.getPostDetails());
+    }
+    console.log(this.userObj);
   }
 }

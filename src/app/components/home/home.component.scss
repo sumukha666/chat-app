@@ -1,0 +1,61 @@
+.custom-file-upload {
+  border: 1px solid #ccc;
+  display: inline-block;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+.content {
+  padding: 1rem;
+  overflow: hidden;
+}
+
+.leftDiv {
+  position: fixed;
+  float: left;
+}
+
+.adv {
+  float: inline-end;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.example-card {
+  min-width: 19%;
+}
+
+.exp {
+  margin-left: 20%;
+}
+
+.contents {
+  min-width: 19vw;
+  background-color: r;
+}
+
+.extension {
+  max-width: 18vw;
+}
+
+@media only screen and (max-width: 600px) {
+  .leftDiv {
+    padding-bottom: 1rem;
+    position: relative;
+    float: inline-start;
+  }
+  .exp {
+    margin-left: 0;
+  }
+
+  .extension {
+    max-width: 90vw;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+  .extension {
+    max-width: 19vw;
+  }
+}

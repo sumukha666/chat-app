@@ -28,6 +28,18 @@ import { HammerModule } from "@angular/platform-browser";
 import { NavBarComponent } from "./components/nav-bar/nav-bar.component";
 import { ActivityComponent } from "./components/activity/activity.component";
 import { MenuComponent } from "./components/menu/menu.component";
+import { CardComponent } from "./components/card/card.component";
+import {
+  HAMMER_GESTURE_CONFIG,
+  HammerGestureConfig,
+} from "@angular/platform-browser";
+import { MatExpansionModule } from "@angular/material/expansion";
+export class MyHammerConfig extends HammerGestureConfig {
+  overrides = {
+    pinch: { enable: false },
+    rotate: { enable: false },
+  } as any;
+}
 
 @NgModule({
   declarations: [
@@ -36,6 +48,7 @@ import { MenuComponent } from "./components/menu/menu.component";
     NavBarComponent,
     ActivityComponent,
     MenuComponent,
+    CardComponent,
   ],
   imports: [
     BrowserModule,
@@ -62,8 +75,14 @@ import { MenuComponent } from "./components/menu/menu.component";
     MatProgressSpinnerModule,
     MatTabsModule,
     HammerModule,
+    MatExpansionModule,
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HAMMER_GESTURE_CONFIG,
+      useClass: MyHammerConfig,
+    },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
