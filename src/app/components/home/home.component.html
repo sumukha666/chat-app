@@ -11,7 +11,7 @@
               <mat-expansion-panel-header>
                 <mat-panel-title> Menu-1 </mat-panel-title>
               </mat-expansion-panel-header>
-              <mat-selection-list #shoes [multiple]="false">
+              <mat-selection-list [multiple]="false">
                 <mat-list-option [value]="'opt1'"> option1 </mat-list-option>
                 <mat-list-option [value]="'opt2'"> option2 </mat-list-option>
                 <mat-list-option [value]="'opt3'"> option3 </mat-list-option>
@@ -44,7 +44,13 @@
       </mat-card>
     </div>
 
-    <div fxFlex="60%" fxFlex.xs="100%" fxFlex.sm="100%" class="exp">
+    <div
+      @postsAnimation
+      fxFlex="60%"
+      fxFlex.xs="100%"
+      fxFlex.sm="100%"
+      class="exp"
+    >
       <app-card
         *ngFor="let obj of userObj"
         [iconUrl]="obj['iconUrl']"

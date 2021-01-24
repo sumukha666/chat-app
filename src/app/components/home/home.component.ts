@@ -1,3 +1,4 @@
+import { postAnimationTrigger } from "./../../animation/animations";
 import { HelperService } from "./../../services/helper.service";
 import { Component, OnInit, Output, EventEmitter } from "@angular/core";
 
@@ -5,10 +6,10 @@ import { Component, OnInit, Output, EventEmitter } from "@angular/core";
   selector: "app-home",
   templateUrl: "./home.component.html",
   styleUrls: ["./home.component.scss"],
+  animations: [postAnimationTrigger],
 })
 export class HomeComponent implements OnInit {
   userObj = [];
-
   @Output() sendIndex: EventEmitter<any> = new EventEmitter<any>();
   constructor(private helperFun: HelperService) {}
 
