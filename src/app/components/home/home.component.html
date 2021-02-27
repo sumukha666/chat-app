@@ -54,14 +54,18 @@
       <app-card
         *ngFor="let obj of userObj"
         [iconUrl]="obj['iconUrl']"
-        [userName]="obj['name']"
-        [userProf]="obj['prof']"
+        [title]="obj['name']"
+        [subTitle]="obj['prof']"
         [postUrl]="obj['postUrl']"
         [cardText]="obj['cardText']"
+        [type]="'posts'"
+        [isAvatarReq]="true"
       ></app-card>
     </div>
 
-    <div fxFlex="20%" fxFlex.xs="100%" fxFlex.sm="100%">Under dev</div>
+    <div fxFlex="20%" fxFlex.xs="100%" fxFlex.sm="100%">
+      <app-add-post></app-add-post>
+    </div>
   </div>
   <div class="adv">
     <p>adv will be displayed</p>

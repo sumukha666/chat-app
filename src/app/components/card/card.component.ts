@@ -9,8 +9,10 @@ export class CardComponent implements OnInit {
   @Input() iconUrl;
   @Input() postUrl;
   @Input() cardText;
-  @Input() userName;
-  @Input() userProf;
+  @Input() title;
+  @Input() subTitle;
+  @Input() type;
+  @Input() isAvatarReq;
   constructor() {
   }
 

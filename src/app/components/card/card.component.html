@@ -1,15 +1,21 @@
 <mat-card class="example-card">
   <mat-card-header>
-    <div mat-card-avatar class="example-header-image" [style]="iconUrl"></div>
-    <mat-card-title>{{ userName }}</mat-card-title>
-    <mat-card-subtitle>{{ userProf }}</mat-card-subtitle>
+    <div *ngIf="isAvatarReq" mat-card-avatar class="example-header-image" [style]="iconUrl"></div>
+    <mat-card-title>{{ title }}</mat-card-title>
+    <mat-card-subtitle>{{ subTitle }}</mat-card-subtitle>
   </mat-card-header>
-  <img
-    mat-card-image
-    [src]="postUrl"
-    alt="Post from user"
-    class="card-image"
-  />
+  <div [ngSwitch]="type">
+    <img
+      *ngSwitchCase="'posts'"
+      mat-card-image
+      [src]="postUrl"
+      alt="Post from user"
+      class="card-image"
+    />
+    <div *ngSwitchCase="'createPost'">
+      post Create Here
+    </div>
+  </div>
   <mat-card-content>
     <h4 class="cardText">
       <b>{{ cardText }}</b>

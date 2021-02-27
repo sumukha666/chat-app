@@ -34,6 +34,7 @@ import {
   HammerGestureConfig,
 } from "@angular/platform-browser";
 import { MatExpansionModule } from "@angular/material/expansion";
+import { AddPostComponent } from "./components/home/add-post/add-post.component";
 export class MyHammerConfig extends HammerGestureConfig {
   overrides = {
     pinch: { enable: false },
@@ -49,6 +50,7 @@ export class MyHammerConfig extends HammerGestureConfig {
     ActivityComponent,
     MenuComponent,
     CardComponent,
+    AddPostComponent,
   ],
   imports: [
     BrowserModule,
