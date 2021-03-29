@@ -1,9 +1,21 @@
-<div class="divPage" (swiperight)="handleSwipeRight()">
-  swipe me, either left or right
-  <br />
-  <br />
-  Type =rand(1,2) for text in the style of help information. This is helpful if
-  you want something that approximates English text. Type =lorem(1,2) for text
-  in classic lorem ipsum format. This can be good if you don't want to focus on
-  the content. Type =rand.
+<div class="divPage" (swiperight)="handleSwipeRight()" class="help">
+  <div class="sect sectOne">
+    <div class="section group">
+      <div class="col span_1_of_1">
+          <h1 style="color: white; text-shadow: 1px 1px rgb(218, 94, 114);">Parallax demo</h1>
+          <br>
+      </div>
+    </div>
+  </div>
+  <div class="sect sectTwo">
+    <a name="about"></a>
+    <div class="section group">
+      <div class="col span_1_of_1" id="description">
+      </div>
+    </div>
+  </div>
+  <div class="sect sectThree">
+    <a name="works"></a>
+  </div>
+  
 </div>
