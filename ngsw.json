@@ -1,6 +1,6 @@
 {
-  "configVersion": 1,
-  "timestamp": 1614419370926,
+  "configVersion": "1.1.1",
+  "timestamp": 1617016295569,
   "index": "https://sumukha666.github.io/chat-app/index.html",
   "assetGroups": [
     {
@@ -13,8 +13,8 @@
       "urls": [
         "https://sumukha666.github.io/chat-app/favicon.ico",
         "https://sumukha666.github.io/chat-app/index.html",
-        "https://sumukha666.github.io/chat-app/main-es2015.dcf6f27fdd38378253e3.js",
-        "https://sumukha666.github.io/chat-app/main-es5.dcf6f27fdd38378253e3.js",
+        "https://sumukha666.github.io/chat-app/main-es2015.bedd83665a3a0810c24e.js",
+        "https://sumukha666.github.io/chat-app/main-es5.bedd83665a3a0810c24e.js",
         "https://sumukha666.github.io/chat-app/manifest.webmanifest",
         "https://sumukha666.github.io/chat-app/polyfills-es2015.c25d4470d674b7a8a053.js",
         "https://sumukha666.github.io/chat-app/polyfills-es5.2873ddbdebf2c33cba17.js",
@@ -32,6 +32,9 @@
         "ignoreVary": true
       },
       "urls": [
+        "https://sumukha666.github.io/chat-app/assets/help/1.jpg",
+        "https://sumukha666.github.io/chat-app/assets/help/2.jpg",
+        "https://sumukha666.github.io/chat-app/assets/help/3.jpg",
         "https://sumukha666.github.io/chat-app/assets/icons/1.jpg",
         "https://sumukha666.github.io/chat-app/assets/icons/2.jpg",
         "https://sumukha666.github.io/chat-app/assets/icons/3.jpg",
@@ -59,6 +62,9 @@
   ],
   "dataGroups": [],
   "hashTable": {
+    "https://sumukha666.github.io/chat-app/assets/help/1.jpg": "532fce2ee4a473f001466726b1a6a489a448cdf0",
+    "https://sumukha666.github.io/chat-app/assets/help/2.jpg": "c5a16834dd0f678871bb66bcbba526dea340a6d6",
+    "https://sumukha666.github.io/chat-app/assets/help/3.jpg": "ecc678ed72c302eadb5a536d45d521f2b7228de0",
     "https://sumukha666.github.io/chat-app/assets/icons/1.jpg": "042461e7497414b7e63acb19162f916c2aa2d287",
     "https://sumukha666.github.io/chat-app/assets/icons/2.jpg": "b0c950ec2d0f3c7ea91fbc6334077e7a32741c8e",
     "https://sumukha666.github.io/chat-app/assets/icons/3.jpg": "2384da10708c64ab56eee9a763ae4db5e853c6ef",
@@ -81,9 +87,9 @@
     "https://sumukha666.github.io/chat-app/assets/posts/5.jpg": "16d9ec9f191774ec555325b9f24c9ceb6300b12b",
     "https://sumukha666.github.io/chat-app/assets/posts/6.jpg": "c9c1fb75a0340db288de9c58130b57b47bccaf47",
     "https://sumukha666.github.io/chat-app/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "https://sumukha666.github.io/chat-app/index.html": "9ecd78728aaa0c186ec859db19bb104ac0064ce2",
-    "https://sumukha666.github.io/chat-app/main-es2015.dcf6f27fdd38378253e3.js": "3fdd5009821cfc7d2f4409009a806eee0634c14e",
-    "https://sumukha666.github.io/chat-app/main-es5.dcf6f27fdd38378253e3.js": "6a3bf4382fe419dd685317ba6792162184544c2b",
+    "https://sumukha666.github.io/chat-app/index.html": "a90d1a13ebbf23c974c48a8b38cfbe8866509546",
+    "https://sumukha666.github.io/chat-app/main-es2015.bedd83665a3a0810c24e.js": "417ae324d41f4dc7041afa8e0669d84decc503ba",
+    "https://sumukha666.github.io/chat-app/main-es5.bedd83665a3a0810c24e.js": "db5d2cbf874d10bc0dea3653a9fef7426a51ec1a",
     "https://sumukha666.github.io/chat-app/manifest.webmanifest": "23d1ba386745c783b2264a7f3c9e76962565a311",
     "https://sumukha666.github.io/chat-app/polyfills-es2015.c25d4470d674b7a8a053.js": "4fb60e77a1bc92a642cf945d17e91c779f184485",
     "https://sumukha666.github.io/chat-app/polyfills-es5.2873ddbdebf2c33cba17.js": "50b0e0d06bcae9c8b73ad71460107905cc7c66e1",
