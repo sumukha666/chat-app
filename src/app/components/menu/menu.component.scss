@@ -1,0 +1,29 @@
+.sect {
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 95vh; 
+  }
+  
+  .sectOne {
+    background-image: url("/assets/help/1.jpg");
+  }
+  
+  .sectTwo {
+    background-image: url("/assets/help/2.jpg");
+  }
+  
+  .sectThree {
+    background-image: url("/assets/help/3.jpg");
+  }
+  
+  .help {
+    width: 100%;
+    //background: aqua;
+    text-align: left;
+    box-sizing: border-box;
+    padding: 15px 10px;
+    cursor: pointer;
+  }
