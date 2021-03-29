@@ -34,6 +34,8 @@ import {
   HammerGestureConfig,
 } from "@angular/platform-browser";
 import { MatExpansionModule } from "@angular/material/expansion";
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 export class MyHammerConfig extends HammerGestureConfig {
   overrides = {
     pinch: { enable: false },
@@ -76,6 +78,7 @@ export class MyHammerConfig extends HammerGestureConfig {
     MatTabsModule,
     HammerModule,
     MatExpansionModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
   ],
   providers: [
     {
